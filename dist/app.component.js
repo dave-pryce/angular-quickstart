@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My second Angular 2 App</h1>'
+            template: "<h1>My second Angular 2 App</h1>\n  <table>\n    <tr>\n    <th>Language - Polyglot </th>\n    </tr>\n    <tr>\n    <td> Java </td>\n    </tr>\n  </table>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
