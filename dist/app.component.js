@@ -8,18 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-    }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "<h1>My second Angular 2 App</h1>\n  <table>\n    <tr>\n    <th>Language - Polyglot </th>\n    </tr>\n    <tr>\n    <td> Java </td>\n    </tr>\n  </table>"
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
-}());
+const core_1 = require('@angular/core');
+let AppComponent = class AppComponent {
+};
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: `<h1>My second Angular 2 App</h1>
+  <table>
+    <tr>
+    <th>Language - Polyglot </th>
+    </tr>
+    <tr>
+    <td> Java </td>
+    </tr>
+  </table>`
+    }), 
+    __metadata('design:paramtypes', [])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map
