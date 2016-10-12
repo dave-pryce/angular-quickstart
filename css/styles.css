@@ -11,4 +11,17 @@ h2, h3, table {
 }
 body {
   margin: 2em;
+  max-width : 600px;
+  margin : auto;
+}
+
+
+.hero
+{
+  max-width : 600px;
+  margin : auto;
+  padding : 20px;
+  background-color : black;
+  color : white;
+  text-align : center;
 }
