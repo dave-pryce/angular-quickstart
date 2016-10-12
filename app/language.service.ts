@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Language } from './language';
+import 'rxjs/add/operator/map';
 
 @Injectable()
-  export class languageService {
+  export class LanguageService {
 
     constructor(private http: Http) {}
 

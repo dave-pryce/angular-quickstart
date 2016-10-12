@@ -10,19 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var language_service_1 = require('./language.service');
-var http_1 = require('@angular/http');
-var AppComponent = (function () {
-    function AppComponent() {
+var LanguagesComponent = (function () {
+    function LanguagesComponent(languageService) {
+        this.languageService = languageService;
     }
-    AppComponent = __decorate([
+    LanguagesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.languageService.getLanguages()
+            .subscribe(function (data) { return _this.languages = data; });
+    };
+    LanguagesComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "<h1 class=\"hero\">My second Angular 2 App</h1>",
-            providers: [language_service_1.LanguageService, http_1.HTTP_PROVIDERS]
+            selector: 'my-languages',
+            template: "<table>\n    <tr>\n    <th>Language - Polyglot </th>\n    </tr>\n    <tr *ngFor=\"let langauage of languages\">\n    <td>{{language.id}}</td>\n    <td>{{language.name}}</td>\n    </tr>\n  </table>"
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [language_service_1.LanguageService])
+    ], LanguagesComponent);
+    return LanguagesComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LanguagesComponent = LanguagesComponent;
+//# sourceMappingURL=languages.component.js.map

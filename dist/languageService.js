@@ -8,20 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const http_1 = require('@angular/http');
-let languageService = class languageService {
-    constructor(http) {
+var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var languageService = (function () {
+    function languageService(http) {
         this.http = http;
     }
-    getLanguages() {
+    languageService.prototype.getLanguages = function () {
         return this.http.get('app/language.json')
-            .map(response => response.json().languageData);
-    }
-};
-languageService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], languageService);
+            .map(function (response) { return response.json().languageData; });
+    };
+    languageService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], languageService);
+    return languageService;
+}());
 exports.languageService = languageService;
 //# sourceMappingURL=languageService.js.map

@@ -1,25 +1,11 @@
 import { Component } from '@angular/core';
-import { Language} from './language';
-import { LanguageService } from '/languageService';
+import { LanguageService } from './language.service';
+import { HTTP_PROVIDERS } from '@angular/http';
 
 @Component({
   selector: 'my-app',
-  template: `<h1 class="hero">My second Angular 2 App</h1>
-  <table>
-    <tr>
-    <th>Language - Polyglot </th>
-    </tr>
-    <tr>
-    <td> Java </td>
-    </tr>
-  </table>`
+  template: `<h1 class="hero">My second Angular 2 App</h1>`,
+  providers:[LanguageService, HTTP_PROVIDERS]
 })
-
-//constructor(private languageService: LanguageService) {}
-
-//ngOnInit() {
-//  this.languageService.getLanguages()
-//    .subscribe(data => this.languages = data);
-//}
 
 export class AppComponent { }

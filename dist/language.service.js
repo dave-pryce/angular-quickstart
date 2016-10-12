@@ -9,20 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var AppModule = (function () {
-    function AppModule() {
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+var LanguageService = (function () {
+    function LanguageService(http) {
+        this.http = http;
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    LanguageService.prototype.getLanguages = function () {
+        return this.http.get('app/language.json')
+            .map(function (response) { return response.json().languageData; });
+    };
+    LanguageService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], LanguageService);
+    return LanguageService;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.LanguageService = LanguageService;
+//# sourceMappingURL=language.service.js.map
