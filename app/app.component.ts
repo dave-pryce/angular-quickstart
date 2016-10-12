@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Language} from './language';
+import { LanguageService } from '/languageService';
 
 @Component({
   selector: 'my-app',
@@ -11,13 +13,13 @@ import { Component } from '@angular/core';
     <td> Java </td>
     </tr>
   </table>`
-});
+})
 
-constructor(private languageService: LanguageService) {}
+//constructor(private languageService: LanguageService) {}
 
-ngOnInit() {
-  this.languageService.getLanguages()
-    .subscribe(data => this.languages = data);
-}
+//ngOnInit() {
+//  this.languageService.getLanguages()
+//    .subscribe(data => this.languages = data);
+//}
 
 export class AppComponent { }
