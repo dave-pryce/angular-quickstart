@@ -22,7 +22,7 @@ var LanguagesComponent = (function () {
     LanguagesComponent = __decorate([
         core_1.Component({
             selector: 'my-languages',
-            template: "<table>\n    <tr>\n    <th>Language - Polyglot </th>\n    </tr>\n    <tr *ngFor=\"let langauage of languages\">\n    <td>{{language.id}}</td>\n    <td>{{language.name}}</td>\n    </tr>\n  </table>"
+            templateUrl: 'app/languages.component.html'
         }), 
         __metadata('design:paramtypes', [language_service_1.LanguageService])
     ], LanguagesComponent);

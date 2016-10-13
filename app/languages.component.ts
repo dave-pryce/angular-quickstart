@@ -4,15 +4,7 @@ import { LanguageService } from './language.service';
 
 @Component({
   selector: 'my-languages',
-  template: `<table>
-    <tr>
-    <th>Language - Polyglot </th>
-    </tr>
-    <tr *ngFor="let langauage of languages">
-    <td>{{language.id}}</td>
-    <td>{{language.name}}</td>
-    </tr>
-  </table>`
+  templateUrl: 'app/languages.component.html'
 })
 
 export class LanguagesComponent {
