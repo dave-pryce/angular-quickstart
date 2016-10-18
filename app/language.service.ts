@@ -4,6 +4,8 @@ import { Http } from '@angular/http';
 import { Language } from './language';
 import 'rxjs/add/operator/map';
 
+console.log('Language service running');
+
 @Injectable()
   export class LanguageService {
 
