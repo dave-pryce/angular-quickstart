@@ -12,24 +12,13 @@ var core_1 = require('@angular/core');
 //import { LanguageService } from './language.service';
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
-var Language = (function () {
-    function Language() {
-    }
-    return Language;
-}());
-exports.Language = Language;
-language: Language = {
-    id: 1,
-    name: 'Ruby'
-};
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Languages';
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1 class=\"heading\">Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  <p> {{language.name}} </p>\n\n  " //,
+            template: "\n  <h1 class=\"hero\">My second Angular 2 App</h1>\n  <main></main>\n  " //,
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

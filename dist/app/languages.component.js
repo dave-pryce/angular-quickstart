@@ -9,31 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import { LanguageService } from './language.service';
-//import { HTTP_PROVIDERS } from '@angular/http';
-//import { LanguageComponent } from './languages.component';
-var Language = (function () {
-    function Language() {
+var language_service_1 = require('./language.service');
+console.log('Language component running');
+var LanguagesComponent = (function () {
+    function LanguagesComponent(languageService) {
+        this.languageService = languageService;
     }
-    return Language;
-}());
-exports.Language = Language;
-language: Language = {
-    id: 1,
-    name: 'Ruby'
-};
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Languages';
-    }
-    AppComponent = __decorate([
+    LanguagesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.languageService.getLanguages()
+            .subscribe(function (data) { return _this.languages = data; });
+    };
+    LanguagesComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n  <h1 class=\"heading\">Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  <p> {{language.name}} </p>\n\n  " //,
+            selector: 'my-languages',
+            templateUrl: 'app/languages.component.html'
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [language_service_1.LanguageService])
+    ], LanguagesComponent);
+    return LanguagesComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.LanguagesComponent = LanguagesComponent;
+//# sourceMappingURL=languages.component.js.map

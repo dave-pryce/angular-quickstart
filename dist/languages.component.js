@@ -25,9 +25,10 @@ var LanguagesComponent = (function () {
             selector: 'my-languages',
             templateUrl: 'app/languages.component.html'
         }), 
-        __metadata('design:paramtypes', [language_service_1.LanguageService])
+        __metadata('design:paramtypes', [(typeof (_a = typeof language_service_1.LanguageService !== 'undefined' && language_service_1.LanguageService) === 'function' && _a) || Object])
     ], LanguagesComponent);
     return LanguagesComponent;
+    var _a;
 }());
 exports.LanguagesComponent = LanguagesComponent;
 //# sourceMappingURL=languages.component.js.map

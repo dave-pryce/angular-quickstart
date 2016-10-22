@@ -9,31 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import { LanguageService } from './language.service';
-//import { HTTP_PROVIDERS } from '@angular/http';
-//import { LanguageComponent } from './languages.component';
-var Language = (function () {
-    function Language() {
+var platform_browser_1 = require('@angular/platform-browser');
+var app_component_1 = require('./app.component');
+var AppModule = (function () {
+    function AppModule() {
     }
-    return Language;
-}());
-exports.Language = Language;
-language: Language = {
-    id: 1,
-    name: 'Ruby'
-};
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Languages';
-    }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n  <h1 class=\"heading\">Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  <p> {{language.name}} </p>\n\n  " //,
+    AppModule = __decorate([
+        core_1.NgModule({
+            imports: [platform_browser_1.BrowserModule],
+            declarations: [app_component_1.AppComponent],
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], AppModule);
+    return AppModule;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.AppModule = AppModule;
+//# sourceMappingURL=app.module.js.map
