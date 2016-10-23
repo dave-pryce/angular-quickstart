@@ -12,22 +12,24 @@ var core_1 = require('@angular/core');
 //import { LanguageService } from './language.service';
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
-//export class Language {
-//  id: number;
-//  name: string;
-//}
+var LANGUAGES = [
+    { "id": 1, "name": "Java" },
+    { "id": 2, "name": "HTML" },
+    { "id": 3, "name": "Ruby On Rails" },
+    { "id": 4, "name": "CSS" }
+];
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Programming Languages';
-        this.language = {
-            id: 1,
-            name: 'HTML'
-        };
+        this.languages = LANGUAGES;
     }
+    AppComponent.prototype.onSelect = function (language) {
+        this.selectedLanguage = language;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n  <h3>{{language.name}} <h3>\n  <div><label>id: </label>{{language.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"language.name\" placeholde=\"language\">\n  <div>\n\n  " //,
+            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div *ngIf=\"selectedLanguage\" class=\"languageHeading\">\n  <h2><strong>{{selectedLanguage.name}}</strong></h2>\n  <div><label>id: </label>{{selectedLanguage.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"selectedLanguage.name\" placeholde=\"language name\">\n  </div>\n  </div>\n\n\n\n\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

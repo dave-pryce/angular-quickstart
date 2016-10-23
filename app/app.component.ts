@@ -5,10 +5,14 @@ import { Language } from './language';
 //import { LanguageComponent } from './languages.component';
 
 
-//export class Language {
-//  id: number;
-//  name: string;
-//}
+
+const LANGUAGES: Language[] = [
+    {"id" : 1,"name" : "Java"},
+    {"id" : 2,"name" : "HTML"},
+    {"id" : 3,"name" : "Ruby On Rails"},
+    {"id" : 4,"name" : "CSS"}
+];
+
 
 
 
@@ -19,20 +23,40 @@ import { Language } from './language';
   <h1>Second Angular 2 App</h1>
   <h2> {{title}} </h2>
   </div>
-  <h3>{{language.name}} <h3>
-  <div><label>id: </label>{{language.id}}</div>
-  <div><label>name: </label>
-  <input [(ngModel)]="language.name" placeholde="language">
-  <div>
 
-  `//,
+  <div *ngIf="selectedLanguage" class="languageHeading">
+  <h2><strong>{{selectedLanguage.name}}</strong></h2>
+  <div><label>id: </label>{{selectedLanguage.id}}</div>
+  <div><label>name: </label>
+  <input [(ngModel)]="selectedLanguage.name" placeholde="language name">
+  </div>
+  </div>
+
+
+
+
+  <div class="languages">
+  <h2>Languages I Know </h2>
+  <ul>
+    <li *ngFor="let language of languages"
+    [class.selected]="language === selectedLanguage"
+    (click)="onSelect(language)">
+    <span class="badge">{{language.id}}</span> {{language.name}}
+    </li>
+  </ul>
+  </div>`
+  //,
   //providers:[LanguageService, HTTP_PROVIDERS]
 })
 
+
+
 export class AppComponent {
   title = 'Programming Languages';
-  language: Language = {
-    id: 1,
-    name : 'HTML'
-  };
+  languages = LANGUAGES;
+  selectedLanguage : Language;
+
+  onSelect(language: Language): void {
+    this.selectedLanguage = language;
+  }
 }
