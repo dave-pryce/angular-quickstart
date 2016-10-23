@@ -36,6 +36,8 @@ const LANGUAGES: Language[] = [
   </ul>
   </div>
   </div>
+
+  <my-language-detail [language]="selectedLanguage"></my-language-detail>
   `
   //,
   //providers:[LanguageService, HTTP_PROVIDERS]

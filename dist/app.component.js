@@ -29,7 +29,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>\n  "
+            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>\n\n  <my-language-detail [language]=\"selectedLanguage\"></my-language-detail>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

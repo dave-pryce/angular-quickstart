@@ -9,13 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var language_1 = require('./language');
 var LanguageDetailComponent = (function () {
     function LanguageDetailComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', language_1.Language)
+    ], LanguageDetailComponent.prototype, "language", void 0);
     LanguageDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-language-detail',
-            template: "\n  <div *ngIf=\"selectedLanguage\" class=\"languageHeading\">\n  <h2><strong>{{selectedLanguage.name}}</strong></h2>\n  <div><label>id: </label>{{selectedLanguage.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"selectedLanguage.name\" placeholde=\"language name\">\n  </div>\n  </div>\n  "
+            template: "\n  <div *ngIf=\"language\" class=\"languageHeading\">\n  <h2>Language Details: <strong>{{language.name}}</strong></h2>\n  <div class=\"formDetail\">\n  <div><label>id: </label>{{language.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"language.name\" placeholde=\"language name\">\n  </div>\n  </div>\n  </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], LanguageDetailComponent);

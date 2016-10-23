@@ -97,4 +97,12 @@ body {
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+
+  .formDetail {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #607D8B;
+  }
