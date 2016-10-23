@@ -1,20 +1,13 @@
 import { Component } from '@angular/core';
 import { Language } from './language';
-//import { LanguageService } from './language.service';
+import { LanguageService } from './language.service';
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
 
 
+constructor (private languageService: LanguageService) { }
 
-const LANGUAGES: Language[] = [
-    {"id" : 1,"name" : "Java"},
-    {"id" : 2,"name" : "HTML"},
-    {"id" : 3,"name" : "Ruby On Rails"},
-    {"id" : 4,"name" : "CSS"}
-];
-
-
-
+languages: Languages[];
 
 @Component({
   selector: 'my-app',
@@ -39,8 +32,8 @@ const LANGUAGES: Language[] = [
 
   <my-language-detail [language]="selectedLanguage"></my-language-detail>
   `
-  //,
-  //providers:[LanguageService, HTTP_PROVIDERS]
+  ,
+  providers: [LanguageService]
 })
 
 

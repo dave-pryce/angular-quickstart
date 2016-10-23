@@ -9,20 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
-console.log('Language service running');
+var mock_languages_1 = require('./mock-languages');
 var LanguageService = (function () {
-    function LanguageService(http) {
-        this.http = http;
+    function LanguageService() {
+        this.getLanguages = {
+            return: mock_languages_1.LANGUAGES
+        };
     }
-    LanguageService.prototype.getLanguages = function () {
-        return this.http.get('app/language.json')
-            .map(function (response) { return response.json().languageData; });
-    };
     LanguageService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [])
     ], LanguageService);
     return LanguageService;
 }());

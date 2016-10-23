@@ -9,15 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-//import { LanguageService } from './language.service';
+var language_service_1 = require('./language.service');
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
-var LANGUAGES = [
-    { "id": 1, "name": "Java" },
-    { "id": 2, "name": "HTML" },
-    { "id": 3, "name": "Ruby On Rails" },
-    { "id": 4, "name": "CSS" }
-];
+constructor(private, languageService, language_service_1.LanguageService);
+{ }
+languages: Languages[];
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Programming Languages';
@@ -29,7 +26,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>\n\n  <my-language-detail [language]=\"selectedLanguage\"></my-language-detail>\n  "
+            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>\n\n  <my-language-detail [language]=\"selectedLanguage\"></my-language-detail>\n  ",
+            providers: [language_service_1.LanguageService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
