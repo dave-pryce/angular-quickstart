@@ -1,5 +1,3 @@
-import { Language } from './language';
-
 export const LANGUAGES: Language[] = [{
   "id" : 1,
   "name" : "Java"},

@@ -24,17 +24,6 @@ const LANGUAGES: Language[] = [
   <h2> {{title}} </h2>
   </div>
 
-  <div *ngIf="selectedLanguage" class="languageHeading">
-  <h2><strong>{{selectedLanguage.name}}</strong></h2>
-  <div><label>id: </label>{{selectedLanguage.id}}</div>
-  <div><label>name: </label>
-  <input [(ngModel)]="selectedLanguage.name" placeholde="language name">
-  </div>
-  </div>
-
-
-
-
   <div class="languagelist">
   <div class="languages">
   <h2>Languages I Know </h2>
@@ -46,7 +35,8 @@ const LANGUAGES: Language[] = [
     </li>
   </ul>
   </div>
-  </div>`
+  </div>
+  `
   //,
   //providers:[LanguageService, HTTP_PROVIDERS]
 })
