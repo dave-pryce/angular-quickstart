@@ -35,6 +35,7 @@ const LANGUAGES: Language[] = [
 
 
 
+  <div class="languagelist">
   <div class="languages">
   <h2>Languages I Know </h2>
   <ul>
@@ -44,6 +45,7 @@ const LANGUAGES: Language[] = [
     <span class="badge">{{language.id}}</span> {{language.name}}
     </li>
   </ul>
+  </div>
   </div>`
   //,
   //providers:[LanguageService, HTTP_PROVIDERS]

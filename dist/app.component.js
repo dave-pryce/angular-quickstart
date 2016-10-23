@@ -29,7 +29,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div *ngIf=\"selectedLanguage\" class=\"languageHeading\">\n  <h2><strong>{{selectedLanguage.name}}</strong></h2>\n  <div><label>id: </label>{{selectedLanguage.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"selectedLanguage.name\" placeholde=\"language name\">\n  </div>\n  </div>\n\n\n\n\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>"
+            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n\n  <div *ngIf=\"selectedLanguage\" class=\"languageHeading\">\n  <h2><strong>{{selectedLanguage.name}}</strong></h2>\n  <div><label>id: </label>{{selectedLanguage.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"selectedLanguage.name\" placeholde=\"language name\">\n  </div>\n  </div>\n\n\n\n\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
