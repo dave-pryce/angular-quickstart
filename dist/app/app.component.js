@@ -8,21 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 //import { LanguageService } from './language.service';
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
+//export class Language {
+//  id: number;
+//  name: string;
+//}
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Programming Languages';
+        this.language = {
+            id: 1,
+            name: 'HTML'
+        };
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n  <h1 class=\"hero\">My second Angular 2 App</h1>\n  <main></main>\n  " //,
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
     return AppComponent;
 }());
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n  <h3>{{language.name}} <h3>\n  <div><label>id: </label>{{language.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"language.name\" placeholde=\"language\">\n  <div>\n\n  " //,
+    }),
+    __metadata("design:paramtypes", [])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

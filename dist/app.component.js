@@ -12,24 +12,22 @@ var core_1 = require('@angular/core');
 //import { LanguageService } from './language.service';
 //import { HTTP_PROVIDERS } from '@angular/http';
 //import { LanguageComponent } from './languages.component';
-var Language = (function () {
-    function Language() {
-    }
-    return Language;
-}());
-exports.Language = Language;
-language: Language = {
-    id: 1,
-    name: 'Ruby'
-};
+//export class Language {
+//  id: number;
+//  name: string;
+//}
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Languages';
+        this.title = 'Programming Languages';
+        this.language = {
+            id: 1,
+            name: 'HTML'
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1 class=\"heading\">Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  <p> {{language.name}} </p>\n\n  " //,
+            template: "\n  <div class=\"heading\">\n  <h1>Second Angular 2 App</h1>\n  <h2> {{title}} </h2>\n  </div>\n  <h3>{{language.name}} <h3>\n  <div><label>id: </label>{{language.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"language.name\" placeholde=\"language\">\n  <div>\n\n  " //,
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
