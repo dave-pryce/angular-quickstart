@@ -5,7 +5,7 @@ import { LANGUAGES } from './mock-languages';
 
 @Injectable()
 export class LanguageService {
-  getLanguages: Languages[] {
-    return LANGUAGES;
+  getLanguages(): Promise<Language[]> {
+    return Promise.resolve(LANGUAGES);
   }
 }

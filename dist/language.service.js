@@ -12,10 +12,10 @@ var core_1 = require('@angular/core');
 var mock_languages_1 = require('./mock-languages');
 var LanguageService = (function () {
     function LanguageService() {
-        this.getLanguages = {
-            return: mock_languages_1.LANGUAGES
-        };
     }
+    LanguageService.prototype.getLanguages = function () {
+        return Promise.resolve(mock_languages_1.LANGUAGES);
+    };
     LanguageService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
