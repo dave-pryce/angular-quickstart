@@ -35,4 +35,4 @@ var LanguagesComponent = (function () {
     return LanguagesComponent;
 }());
 exports.LanguagesComponent = LanguagesComponent;
-//# sourceMappingURL=languages.component.js.map
+//# sourceMappingURL=app.languages.component.js.map
