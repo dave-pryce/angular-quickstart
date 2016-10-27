@@ -10,14 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(lanugaeService) {
+        this.lanugaeService = lanugaeService;
+        this.languages = [];
     }
+    DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.languageService.getLanguages()
+            .then(function (languages) { return _this.languages = languages.slice(1, 5); });
+    };
+    DashboardComponent.prototype.gotoDetail = function (language) { };
     DashboardComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-dashboard',
-            template: "<h3>My Dashboard</h3>"
+            template: 'dashboard.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [Object])
     ], DashboardComponent);
     return DashboardComponent;
 }());
