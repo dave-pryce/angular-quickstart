@@ -17,6 +17,11 @@ import { LanguageService } from './language.service';
   // routes
   RouterModule.forRoot([
     {
+        path: '',
+        rediredtTo: '/dashboard',
+        pathMatch: 'full'
+    },
+    {
       path: 'dashboard',
       component: DashboardComponent
     },
@@ -25,9 +30,8 @@ import { LanguageService } from './language.service';
       component: LanguagesComponent
     },
     {
-        path: '',
-        rediredtTo: 'dashboard',
-        pathMatch: 'full'
+      path: 'detail/:id',
+      component: LanguageDetailComponent
     }
 
   ])

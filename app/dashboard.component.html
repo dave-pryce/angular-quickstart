@@ -1,0 +1,8 @@
+<h3>My Dashboard</h3>
+<div class="gid grid-pad">
+  <div *ngFor="let language of languages" (click)="gotoDetail(language)" class="col-1-4">
+    <div class="module language">
+      <h4>{{language.name}}</h4>
+    </div>
+  </div>
+</div>

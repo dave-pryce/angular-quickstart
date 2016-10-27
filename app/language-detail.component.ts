@@ -1,5 +1,9 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common'
 import { Language } from './language';
+
+import { LanguageService } from './language.service';
 
 @Component ({
   selector: 'my-language-detail',
@@ -15,7 +19,15 @@ import { Language } from './language';
   </div>
   `
 })
-export class LanguageDetailComponent {
-  @Input()
-  language: Language;
+
+
+//constructor (
+//  private languageService: LanguageService,
+//  private route: ActivatedRoute,
+//  private location: Location
+//) {}
+
+
+export class LanguageDetailComponent implements OnInit {
+  @Input() language: Language;
 }

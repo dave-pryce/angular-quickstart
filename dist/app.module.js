@@ -28,6 +28,11 @@ var AppModule = (function () {
                 // routes
                 router_1.RouterModule.forRoot([
                     {
+                        path: '',
+                        rediredtTo: '/dashboard',
+                        pathMatch: 'full'
+                    },
+                    {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
                     },
@@ -36,9 +41,8 @@ var AppModule = (function () {
                         component: languages_component_1.LanguagesComponent
                     },
                     {
-                        path: '',
-                        rediredtTo: 'dashboard',
-                        pathMatch: 'full'
+                        path: 'detail/:id',
+                        component: language_detail_component_1.LanguageDetailComponent
                     }
                 ])
             ],
