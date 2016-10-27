@@ -1,23 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component } from '@angular/core';
 import { Language } from './language';
 import { LanguageService } from './language.service';
 
 @Component ({
   moduleId: module.id,
   selector: 'my-dashboard',
-  template: 'dashboard.component.html'
+  template: `<h3>My Dashboard</h3>`
 })
 
 export class DashboardComponent implements OnInit {
   languages: Language[] = [];
 
-  constructor(private lanugaeService: LangugaeService) {}
+  //constructor(private lanugaeService: LangugaeService) {}
 
-  ngOnInit(): void {
-    this.languageService.getLanguages()
-      .then(languages => this.languages = languages.slice(1,5));
-  }
+  //ngOnInit(): void {
+  //  this.languageService.getLanguages()
+  //    .then(languages => this.languages = languages.slice(1,5));
+  //}
 
-  gotoDetail(language: Language): void {}
+  //gotoDetail(language: Language): void {}
 }

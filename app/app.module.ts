@@ -16,11 +16,11 @@ import { LanguageService } from './language.service';
 
   // routes
   RouterModule.forRoot([
-    {
-        path: '',
-        rediredtTo: '/dashboard',
-        pathMatch: 'full'
-    },
+    //{
+    //    path: '',
+    //    rediredtTo: '/dashboard',
+    //    pathMatch: 'full'
+  //  },
     {
       path: 'dashboard',
       component: DashboardComponent
@@ -28,11 +28,11 @@ import { LanguageService } from './language.service';
     {
       path: 'languages',
       component: LanguagesComponent
-    },
-    {
-      path: 'detail/:id',
-      component: LanguageDetailComponent
-    }
+    }//,
+    //{
+    //  path: 'detail/:id',
+    //  component: LanguageDetailComponent
+    //}
 
   ])
 

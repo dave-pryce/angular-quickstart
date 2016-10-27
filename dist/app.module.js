@@ -27,11 +27,11 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 // routes
                 router_1.RouterModule.forRoot([
-                    {
-                        path: '',
-                        rediredtTo: '/dashboard',
-                        pathMatch: 'full'
-                    },
+                    //{
+                    //    path: '',
+                    //    rediredtTo: '/dashboard',
+                    //    pathMatch: 'full'
+                    //  },
                     {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
@@ -39,11 +39,7 @@ var AppModule = (function () {
                     {
                         path: 'languages',
                         component: languages_component_1.LanguagesComponent
-                    },
-                    {
-                        path: 'detail/:id',
-                        component: language_detail_component_1.LanguageDetailComponent
-                    }
+                    } //,
                 ])
             ],
             declarations: [
