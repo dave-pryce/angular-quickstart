@@ -27,14 +27,18 @@ var LanguageDetailComponent = (function () {
                 .then(function (language) { return _this.language = language; });
         });
     };
+    LanguageDetailComponent.prototype.goBack = function () {
+        this.location.back();
+    };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', language_1.Language)
     ], LanguageDetailComponent.prototype, "language", void 0);
     LanguageDetailComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'my-language-detail',
-            template: "\n  <div *ngIf=\"language\" class=\"languageHeading\">\n  <h2>Language Details: <strong>{{language.name}}</strong></h2>\n  <div class=\"formDetail\">\n  <div><label>id: </label>{{language.id}}</div>\n  <div><label>name: </label>\n  <input [(ngModel)]=\"language.name\" placeholde=\"language name\">\n  </div>\n  </div>\n  </div>\n  "
+            templateUrl: '/app/language-detail.component.html',
         }), 
         __metadata('design:paramtypes', [language_service_1.LanguageService, router_1.ActivatedRoute, common_1.Location])
     ], LanguageDetailComponent);

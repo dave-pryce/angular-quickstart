@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var language_service_1 = require('./language.service');
+var router_1 = require('@angular/router');
 var DashboardComponent = (function () {
-    function DashboardComponent(languageService) {
+    function DashboardComponent(languageService, router) {
         this.languageService = languageService;
+        this.router = router;
         this.languages = [];
     }
     DashboardComponent.prototype.ngOnInit = function () {
@@ -20,14 +22,17 @@ var DashboardComponent = (function () {
         this.languageService.getLanguages()
             .then(function (languages) { return _this.languages = languages.slice(1, 5); });
     };
-    DashboardComponent.prototype.gotoDetail = function (language) { };
+    DashboardComponent.prototype.gotoDetail = function (language) {
+        var link = ['/detail', language.id];
+        this.router.navigate(link);
+    };
     DashboardComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashboard',
-            template: "<h3>My Dashboard</h3>"
+            templateUrl: '/app/dashboard.component.html',
         }), 
-        __metadata('design:paramtypes', [language_service_1.LanguageService])
+        __metadata('design:paramtypes', [language_service_1.LanguageService, router_1.Router])
     ], DashboardComponent);
     return DashboardComponent;
 }());
