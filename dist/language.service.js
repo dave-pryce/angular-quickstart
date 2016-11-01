@@ -16,6 +16,10 @@ var LanguageService = (function () {
     LanguageService.prototype.getLanguages = function () {
         return Promise.resolve(mock_languages_1.LANGUAGES);
     };
+    LanguageService.prototype.getLanguage = function (id) {
+        return this.getLanguages()
+            .then(function (languages) { return languages.find(function (language) { return language.id === id; }); });
+    };
     LanguageService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

@@ -17,9 +17,9 @@ import { LanguageService } from './language.service';
   // routes
   RouterModule.forRoot([
     {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
+      path: '',
+      redirectTo: '/dashboard',
+      pathMatch: 'full'
     },
     {
       path: 'dashboard',
