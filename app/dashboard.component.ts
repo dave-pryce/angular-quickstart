@@ -16,12 +16,12 @@ export class DashboardComponent implements OnInit {
   constructor(
     private languageService: LanguageService,
     private router: Router) {
-      
+
     }
 
   ngOnInit(): void {
     this.languageService.getLanguages()
-      .then(languages => this.languages = languages.slice(1,5));
+      .then(languages => this.languages = languages.slice(1,4));
   }
 
   gotoDetail(language: Language): void {

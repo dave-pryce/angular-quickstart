@@ -20,7 +20,7 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.languageService.getLanguages()
-            .then(function (languages) { return _this.languages = languages.slice(1, 5); });
+            .then(function (languages) { return _this.languages = languages.slice(1, 4); });
     };
     DashboardComponent.prototype.gotoDetail = function (language) {
         var link = ['/detail', language.id];
