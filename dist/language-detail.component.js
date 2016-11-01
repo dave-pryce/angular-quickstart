@@ -13,6 +13,7 @@ var language_1 = require('./language');
 var LanguageDetailComponent = (function () {
     function LanguageDetailComponent() {
     }
+    LanguageDetailComponent.prototype.ngOnInit = function () { };
     __decorate([
         core_1.Input(), 
         __metadata('design:type', language_1.Language)

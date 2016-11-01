@@ -21,13 +21,9 @@ import { LanguageService } from './language.service';
 })
 
 
-//constructor (
-//  private languageService: LanguageService,
-//  private route: ActivatedRoute,
-//  private location: Location
-//) {}
-
 
 export class LanguageDetailComponent implements OnInit {
   @Input() language: Language;
+
+  ngOnInit(): void {}
 }

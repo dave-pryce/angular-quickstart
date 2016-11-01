@@ -27,11 +27,11 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 // routes
                 router_1.RouterModule.forRoot([
-                    //{
-                    //    path: '',
-                    //    rediredtTo: '/dashboard',
-                    //    pathMatch: 'full'
-                    //  },
+                    {
+                        path: '',
+                        redirectTo: '/dashboard',
+                        pathMatch: 'full'
+                    },
                     {
                         path: 'dashboard',
                         component: dashboard_component_1.DashboardComponent
@@ -39,7 +39,11 @@ var AppModule = (function () {
                     {
                         path: 'languages',
                         component: languages_component_1.LanguagesComponent
-                    } //,
+                    },
+                    {
+                        path: 'detail/:id',
+                        component: language_detail_component_1.LanguageDetailComponent
+                    }
                 ])
             ],
             declarations: [
@@ -48,7 +52,7 @@ var AppModule = (function () {
                 language_detail_component_1.LanguageDetailComponent,
                 languages_component_1.LanguagesComponent,
             ],
-            proivders: [
+            providers: [
                 language_service_1.LanguageService
             ],
             bootstrap: [app_component_1.AppComponent]

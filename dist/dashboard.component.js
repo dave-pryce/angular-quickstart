@@ -9,17 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var language_service_1 = require('./language.service');
 var DashboardComponent = (function () {
-    function DashboardComponent() {
+    function DashboardComponent(languageService) {
+        this.languageService = languageService;
         this.languages = [];
     }
+    DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.languageService.getLanguages()
+            .then(function (languages) { return _this.languages = languages.slice(1, 5); });
+    };
+    DashboardComponent.prototype.gotoDetail = function (language) { };
     DashboardComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'my-dashboard',
             template: "<h3>My Dashboard</h3>"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [language_service_1.LanguageService])
     ], DashboardComponent);
     return DashboardComponent;
 }());
