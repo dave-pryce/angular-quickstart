@@ -36,9 +36,10 @@ var LanguageDetailComponent = (function () {
     ], LanguageDetailComponent.prototype, "language", void 0);
     LanguageDetailComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
+            //moduleId: module.id,
             selector: 'my-language-detail',
             templateUrl: '/app/language-detail.component.html',
+            stylesUrls: ['app/language-detail.component.css']
         }), 
         __metadata('design:paramtypes', [language_service_1.LanguageService, router_1.ActivatedRoute, common_1.Location])
     ], LanguageDetailComponent);

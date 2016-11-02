@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component ({
+  //moduleId: module.id,
   selector: 'my-app',
   template:
   `<div class="heading">
@@ -9,10 +10,11 @@ import { Component } from '@angular/core';
   <h2> {{title}} </h2>
   </div>
   <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/languages">Languages</a>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/languages" routerLinkActive="active">Languages</a>
   </nav>
-  <router-outlet></router-outlet>`
+  <router-outlet></router-outlet>`,
+  styleUrls: ['app/app.component.css']
 })
 
 

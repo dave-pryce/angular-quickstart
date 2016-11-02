@@ -28,9 +28,10 @@ var DashboardComponent = (function () {
     };
     DashboardComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
+            //moduleId: module.id,
             selector: 'my-dashboard',
             templateUrl: '/app/dashboard.component.html',
+            styleUrls: ['app/dashboard.component.css']
         }), 
         __metadata('design:paramtypes', [language_service_1.LanguageService, router_1.Router])
     ], DashboardComponent);

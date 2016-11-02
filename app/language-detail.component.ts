@@ -5,9 +5,10 @@ import { Language } from './language';
 import { LanguageService } from './language.service';
 
 @Component ({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'my-language-detail',
   templateUrl: '/app/language-detail.component.html',
+  stylesUrls: ['app/language-detail.component.css']
 })
 
 

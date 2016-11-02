@@ -1,0 +1,20 @@
+<div class="languagelist">
+<div class="languages">
+<h2>Languages I Know </h2>
+<ul>
+  <li *ngFor="let language of languages"
+  [class.selected]="language === selectedLanguage"
+  (click)="onSelect(language)">
+  <span class="badge">{{language.id}}</span> {{language.name}}
+  </li>
+</ul>
+</div>
+</div>
+
+<!--my-language-detail [language]="selectedLanguage"></my-language-detail-->
+<div *ngIf="selectedLanguage">
+<h2>
+{{selectedLanguage.name | uppercase}}
+</h2>
+<button (click)="gotoDetail()"> View Details</button>
+</div>

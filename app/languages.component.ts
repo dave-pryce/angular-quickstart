@@ -2,24 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Language } from './language';
 import { LanguageService } from './language.service';
 
-@Component({
-  selector: 'my-languages',
-  template: `
-  <div class="languagelist">
-  <div class="languages">
-  <h2>Languages I Know </h2>
-  <ul>
-    <li *ngFor="let language of languages"
-    [class.selected]="language === selectedLanguage"
-    (click)="onSelect(language)">
-    <span class="badge">{{language.id}}</span> {{language.name}}
-    </li>
-  </ul>
-  </div>
-  </div>
+import { Router } from '@angular/router';
 
-  <my-language-detail [language]="selectedLanguage"></my-language-detail>
-  `
+@Component({
+  //moduleId: module.id,
+  selector: 'my-languages',
+  templateUrl: '/app/languages.component.html',
+  stylesUrls: ['app/languages.component.css']
   ,
   providers: [LanguageService]
 })
@@ -29,7 +18,9 @@ export class LanguagesComponent implements OnInit {
   languages: Language[];
   selectedLanguage : Language;
 
-constructor (private languageService: LanguageService) { }
+constructor (
+  private router: Router,
+  private languageService: LanguageService) { }
 
 
   getLanguages(): void {
@@ -43,4 +34,9 @@ constructor (private languageService: LanguageService) { }
   onSelect(language: Language): void {
     this.selectedLanguage = language;
   }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedLanguage.id]);
+  }
+
 }

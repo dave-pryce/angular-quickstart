@@ -10,8 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var language_service_1 = require('./language.service');
+var router_1 = require('@angular/router');
 var LanguagesComponent = (function () {
-    function LanguagesComponent(languageService) {
+    function LanguagesComponent(router, languageService) {
+        this.router = router;
         this.languageService = languageService;
     }
     LanguagesComponent.prototype.getLanguages = function () {
@@ -24,13 +26,18 @@ var LanguagesComponent = (function () {
     LanguagesComponent.prototype.onSelect = function (language) {
         this.selectedLanguage = language;
     };
+    LanguagesComponent.prototype.gotoDetail = function () {
+        this.router.navigate(['/detail', this.selectedLanguage.id]);
+    };
     LanguagesComponent = __decorate([
         core_1.Component({
+            //moduleId: module.id,
             selector: 'my-languages',
-            template: "\n  <div class=\"languagelist\">\n  <div class=\"languages\">\n  <h2>Languages I Know </h2>\n  <ul>\n    <li *ngFor=\"let language of languages\"\n    [class.selected]=\"language === selectedLanguage\"\n    (click)=\"onSelect(language)\">\n    <span class=\"badge\">{{language.id}}</span> {{language.name}}\n    </li>\n  </ul>\n  </div>\n  </div>\n\n  <my-language-detail [language]=\"selectedLanguage\"></my-language-detail>\n  ",
+            templateUrl: '/app/languages.component.html',
+            stylesUrls: ['app/languages.component.css'],
             providers: [language_service_1.LanguageService]
         }), 
-        __metadata('design:paramtypes', [language_service_1.LanguageService])
+        __metadata('design:paramtypes', [router_1.Router, language_service_1.LanguageService])
     ], LanguagesComponent);
     return LanguagesComponent;
 }());
