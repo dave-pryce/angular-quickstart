@@ -34,7 +34,7 @@ var LanguagesComponent = (function () {
             //moduleId: module.id,
             selector: 'my-languages',
             templateUrl: '/app/languages.component.html',
-            stylesUrls: ['app/languages.component.css'],
+            styleUrls: ['app/languages.component.css'],
             providers: [language_service_1.LanguageService]
         }), 
         __metadata('design:paramtypes', [router_1.Router, language_service_1.LanguageService])

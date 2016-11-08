@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   //moduleId: module.id,
   selector: 'my-languages',
   templateUrl: '/app/languages.component.html',
-  stylesUrls: ['app/languages.component.css']
+  styleUrls: ['app/languages.component.css']
   ,
   providers: [LanguageService]
 })

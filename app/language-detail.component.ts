@@ -8,7 +8,7 @@ import { LanguageService } from './language.service';
   //moduleId: module.id,
   selector: 'my-language-detail',
   templateUrl: '/app/language-detail.component.html',
-  stylesUrls: ['app/language-detail.component.css']
+  styleUrls: ['app/language-detail.component.css']
 })
 
 

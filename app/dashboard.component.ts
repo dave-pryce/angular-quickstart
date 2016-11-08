@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.languageService.getLanguages()
-      .then(languages => this.languages = languages.slice(1,4));
+      .then(languages => this.languages = languages.slice(1,5));
   }
 
   gotoDetail(language: Language): void {

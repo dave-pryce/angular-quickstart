@@ -39,7 +39,7 @@ var LanguageDetailComponent = (function () {
             //moduleId: module.id,
             selector: 'my-language-detail',
             templateUrl: '/app/language-detail.component.html',
-            stylesUrls: ['app/language-detail.component.css']
+            styleUrls: ['app/language-detail.component.css']
         }), 
         __metadata('design:paramtypes', [language_service_1.LanguageService, router_1.ActivatedRoute, common_1.Location])
     ], LanguageDetailComponent);
