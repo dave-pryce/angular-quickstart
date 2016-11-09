@@ -3,7 +3,7 @@ var InMemoryDataService = (function () {
     function InMemoryDataService() {
     }
     InMemoryDataService.prototype.createDb = function () {
-        var Languages = [
+        var languages = [
             { "id": 1, "name": "Java" },
             { "id": 2, "name": "HTML" },
             { "id": 3, "name": "Ruby On Rails" },

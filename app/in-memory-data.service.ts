@@ -1,7 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    let Languages = [
+    let languages = [
         {"id" : 1,"name" : "Java"},
         {"id" : 2,"name" : "HTML"},
         {"id" : 3,"name" : "Ruby On Rails"},
