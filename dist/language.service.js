@@ -10,19 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var mock_languages_1 = require('./mock-languages');
+require('rxjs/add/operator/toPromise');
+//import { LANGUAGES } from './mock-languages';
 var LanguageService = (function () {
     function LanguageService(http) {
         this.http = http;
         this.languagesUrl = 'app/languages'; // url to api
     }
     LanguageService.prototype.getLanguages = function () {
-        return Promise.resolve(mock_languages_1.LANGUAGES);
-        //return this.http
-        //        .get(this.languagesUrl)
-        //        .toPromise()
-        //        .then(response => response.json().data as Language[])
-        //        .catch(this.handleError);
+        //return Promise.resolve(LANGUAGES);
+        return this.http
+            .get(this.languagesUrl)
+            .toPromise()
+            .then(function (response) { return response.json().data; });
+        //    .catch(this.handleError);
     };
     LanguageService.prototype.getLanguage = function (id) {
         return this.getLanguages()

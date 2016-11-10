@@ -19,8 +19,8 @@ var languages_component_1 = require('./languages.component');
 var language_service_1 = require('./language.service');
 var app_routing_module_1 = require('./app-routing.module');
 // Imports for loading & configuring the in-memory web api
-//import { InMemoryWebApiModule } from '/angular2-in-memory-web-api';
-//import { InMemoryDataService }  from './in-memory-data.service';
+var angular2_in_memory_web_api_1 = require('/angular2-in-memory-web-api');
+var in_memory_data_service_1 = require('./in-memory-data.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -31,7 +31,7 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 // mock web server
-                //InMemoryWebApiModule.forRoot(InMemoryDataService),
+                angular2_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
                 app_routing_module_1.AppRoutingModule
             ],
             declarations: [

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
-//import { 'rxjs/add/operator/toPromise'};
+import 'rxjs/add/operator/toPromise';
 
 import { Language } from './language';
-import { LANGUAGES } from './mock-languages';
+//import { LANGUAGES } from './mock-languages';
 
 @Injectable()
 export class LanguageService {
@@ -14,12 +14,12 @@ export class LanguageService {
   constructor( private http: Http) {}
 
   getLanguages(): Promise<Language[]> {
-    return Promise.resolve(LANGUAGES);
-    //return this.http
-    //        .get(this.languagesUrl)
-    //        .toPromise()
-    //        .then(response => response.json().data as Language[])
-    //        .catch(this.handleError);
+    //return Promise.resolve(LANGUAGES);
+    return this.http
+            .get(this.languagesUrl)
+            .toPromise()
+            .then(response => response.json().data as Language[]);
+        //    .catch(this.handleError);
   }
 
   getLanguage(id: number) : Promise<Language> {
