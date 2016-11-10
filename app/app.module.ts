@@ -14,8 +14,8 @@ import { AppRoutingModule} from './app-routing.module';
 
 
 // Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from '/angular2-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+//import { InMemoryWebApiModule } from '/angular2-in-memory-web-api';
+//import { InMemoryDataService }  from './in-memory-data.service';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     HttpModule,
 
 // mock web server
-InMemoryWebApiModule.forRoot(InMemoryDataService),
+//InMemoryWebApiModule.forRoot(InMemoryDataService),
 
     AppRoutingModule
 ],
