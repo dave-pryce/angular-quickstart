@@ -12,15 +12,15 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var app_routing_module_1 = require('./app-routing.module');
+// Imports for loading & configuring the in-memory web api
+//import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
+//import { InMemoryDataService }  from './in-memory-data.service';
 var app_component_1 = require('./app.component');
 var dashboard_component_1 = require('./dashboard.component');
 var language_detail_component_1 = require('./language-detail.component');
 var languages_component_1 = require('./languages.component');
 var language_service_1 = require('./language.service');
-var app_routing_module_1 = require('./app-routing.module');
-// Imports for loading & configuring the in-memory web api
-//import { InMemoryWebApiModule } from '/angular2-in-memory-web-api';
-//import { InMemoryDataService }  from './in-memory-data.service';
 var AppModule = (function () {
     function AppModule() {
     }
