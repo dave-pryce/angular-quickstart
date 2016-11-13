@@ -9,7 +9,7 @@ import { Language } from './language';
 @Injectable()
 export class LanguageService {
 
-  private languagesUrl = 'app/languages'; // url to api
+  private languagesUrl = '/languages'; // url to api
 
   constructor( private http: Http) {}
 
