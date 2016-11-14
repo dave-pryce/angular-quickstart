@@ -15,7 +15,7 @@ require('rxjs/add/operator/toPromise');
 var LanguageService = (function () {
     function LanguageService(http) {
         this.http = http;
-        this.languagesUrl = 'app/languages'; // url to api
+        this.languagesUrl = 'localhost:8000/languages'; // url to api
     }
     LanguageService.prototype.getLanguages = function () {
         //return Promise.resolve(LANGUAGES);

@@ -1,4 +1,3 @@
-//import { Language } from './language';
 "use strict";
 exports.LANGUAGES = [
     { "id": 1, "name": "Java" },
