@@ -9,20 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
 require('rxjs/add/operator/toPromise');
-//import { LANGUAGES } from './mock-languages';
+var mock_languages_1 = require('./mock-languages');
 var LanguageService = (function () {
-    function LanguageService(http) {
-        this.http = http;
-        this.languagesUrl = 'localhost:8000/languages'; // url to api
+    function LanguageService() {
     }
+    //private languagesUrl = 'app/languages.json'; // url to api
+    //constructor( private http: Http) {}
     LanguageService.prototype.getLanguages = function () {
-        //return Promise.resolve(LANGUAGES);
-        return this.http
-            .get(this.languagesUrl)
-            .toPromise()
-            .then(function (response) { return response.json().data; });
+        return Promise.resolve(mock_languages_1.LANGUAGES);
+        //return this.http
+        //        .get(this.languagesUrl)
+        //        .toPromise()
+        //        .then(response => response.json().data as Language[]);
         //.catch(this.handleError);
     };
     LanguageService.prototype.getLanguage = function (id) {
@@ -31,7 +30,7 @@ var LanguageService = (function () {
     };
     LanguageService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        __metadata('design:paramtypes', [])
     ], LanguageService);
     return LanguageService;
 }());
